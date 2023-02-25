@@ -71,8 +71,10 @@
           <h2 data-aos="fade-up">The better way to search movies</h2>
           <p data-aos="fade-up" data-aos-delay="100">Type above something about the movie wish you want search</p>
 
-          <form action="MovieController" method="post" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-            <input type="text" class="form-control" placeholder="Title of the movie or Tv Show">
+          <form method="POST" action="getMovie" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
+            @method('POST')
+            @csrf
+            <input type="text" name="movie" class="form-control" placeholder="Title of the movie or Tv Show">
             <button type="submit" class="btn btn-primary">Search</button>
           </form>
 
@@ -151,7 +153,7 @@
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
           <p>
-            
+
             <strong>Phone:</strong> +55 21 9 66801984<br>
             <strong>Email:</strong> jmperes17@gmail.com<br>
           </p>

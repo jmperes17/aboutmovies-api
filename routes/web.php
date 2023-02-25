@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('movie', function () {
+    return view('index');
+});
+
+Route::post('/getMovie','App\Http\Controllers\MovieController@getMovie');
+
+
+
+
