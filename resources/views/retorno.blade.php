@@ -67,7 +67,7 @@
   <section id="hero" class="hero d-flex align-items-center">
     <div class="container">
       <div class="row gy-4 d-flex justify-content-between">
-        
+
 
         <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
           <img src="{{url('assets/img/hero-img.svg')}}" class="img-fluid mb-3 mb-lg-0" alt="">
@@ -85,13 +85,30 @@
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about pt-0">
       <div class="container" data-aos="fade-up">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Year</th>
+              <th scope="col">Poster</th>
 
-        <div class="row gy-4">
+            </tr>
+          </thead>
           @foreach($json['Search'] as $returned)
-          <?= $returned['Title'] . '</br>' ?>
+          <tbody>
+            <tr>
 
+
+              <td><?= $returned['Title'] ?></td>
+              <td><?= $returned['Year'] ?></td>
+              <td><?= "<img src='{$returned['Poster']}'width='200' height='200'>"; ?></td>
+
+
+            </tr>
+          </tbody>
           @endforeach
-        </div>
+        </table>
+
 
       </div>
     </section><!-- End About Us Section -->
