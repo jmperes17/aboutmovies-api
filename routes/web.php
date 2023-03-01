@@ -23,6 +23,10 @@ Route::get('movie', function () {
 
 Route::post('/getMovie','App\Http\Controllers\MovieController@getMovie');
 
+Route::get('retorno', function () {
+    return view('retorno');
+});
+
 
 
 

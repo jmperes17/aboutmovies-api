@@ -15,6 +15,7 @@ class MovieController extends Controller
         $response = $response = HTTP::get('http://www.omdbapi.com/?apikey=14b81e46&s='. $movieName );
         $json =  $response->json();
 
-        return $json;
+        return view('retorno')->with('json', $json);
+        //return $json;
     }
 }
